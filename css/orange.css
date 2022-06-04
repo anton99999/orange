@@ -1,0 +1,249 @@
+
+/* ОСНОВНІ */
+* {
+	text-decoration: none;
+	object-fit: cover;
+	user-select: none;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-user-drag: none;
+	font-family: raleway, roboto, sans-serif;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+	font-weight: normal;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;}
+::-webkit-scrollbar{ width: 0; height: 0} 
+
+html, body{ height: 100%; display: flex; flex-direction: column; }
+main{ height: 100%; overflow: scroll; flex: 1 }
+
+hr{ margin-bottom: 20px }
+a{  color: orange; font-size: 14px; }
+img[alt="ava"]{border-radius: 50%; object-fit: cover;}
+
+/* НАВІГАЦІЯ */
+nav{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 0 20px;
+	overflow-x: scroll;}
+nav p{
+	padding: 5px 15px;
+	margin: 5px 0;
+	cursor: pointer;}
+nav p:hover{
+	background: #eee;
+	border-radius: 10px;}
+p{ margin-bottom: 10px;}
+
+
+/*  КЛАСИ  */
+.wrapper{ 
+	margin:20px;
+}
+.over{
+	position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    z-index: 999;
+	background: #111;
+	padding: 20px;
+}
+.sto{
+	height: 100%;
+}
+.points{
+	font-size: 32px;
+	margin: 0;
+	height: 50px;
+}
+
+
+/* ІНПУТ, СЕЛЕКТ, ТЕКСТАРІА  */
+input, 
+button, 
+select, 
+textarea {
+	border-radius: 10px;
+	margin-bottom: 20px;
+	border: none;
+	outline: none;
+	resize: none;
+	cursor: pointer;
+	width: 100%;
+}
+input, 
+select, 
+textarea {
+	color: #fff;
+	border: 1px solid #fff;
+	padding: 14px 0;
+	padding-left: 20px;
+	background: none;
+}
+input[type="checkbox"], 
+input[type="radio"]{
+	width: 20px;
+	height: 20px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+input[type="range"],
+input[type="color"]{
+	padding: 0;
+	height: 30px;
+}
+input[type="submit"],
+input[type="button"]{
+	padding: 12px 50px;
+	cursor: pointer;
+	background:royalblue;
+	color: white;
+	box-shadow: none;
+	border: none;
+}
+a:hover,
+button:hover, 
+input[type="submit"]:hover, 
+input[type="button"]:hover{ 
+	filter:brightness(80%)
+}
+
+
+/* ЗВИЧАЙНІ КНОПКИ */
+button{
+	width: 100%;
+	background: rgb(95, 132, 255);
+	padding: 12px 50px;
+	color: white;}
+button[color="orange"]{
+	background: orange;
+	color: #000}
+button[color="gray"]{
+	background: #eee;}
+button[color="red"]{
+	color: #000;
+	background: #f55;}
+button[color="blue"]{
+	color: #000;
+	background: rgb(95, 132, 255);}
+button[color="yellow"]{
+	color: #000;
+	background: rgb(255, 216, 59);}
+button[color="green"]{
+	background: rgb(52, 255, 58);
+	color: #000;}
+
+
+/* ВИРІВНЮВАННЯ ТЕКСТУ */
+[text]{ 
+	text-align: center; }
+[text="left"]{ 
+	text-align: left; }
+[text="right"]{ 
+	text-align: right;}
+[text="just"]{ 
+	text-align: justify;}
+
+/* ТЕКСТ 
+(Н1 24PX BLACK) 
+(Н2 24PX GRAY) 
+(Н3 16PX BLACK)
+(Н4 16PX GRAY)
+(Н5 14PX BLACK)
+(Н6 14PX GRAY) */
+h1 {
+	margin-bottom: 20px;
+	font-size: 24px;
+	color: #fff;}
+h2 {
+	margin-bottom: 20px;
+	font-size: 24px;
+	color: gray;}
+h3 {
+	margin-bottom: 15px;
+	font-size: 16px;
+	color: #fff;}
+h4 {
+	margin-bottom: 15px;
+	font-size: 16px;
+	color: gray;}
+h5 {
+	margin-bottom: 5px; 
+	font-size: 14px;
+	color: #fff;}
+h6 {
+	margin-bottom: 5px; 
+	font-size: 14px;
+	color: gray;}
+
+
+/* ВИРІВНЮВАННЯ */
+[flex]{display: flex;}
+
+[flex~="center"] { 
+	justify-content: center; 
+	align-items: center; 
+	flex-direction: column;}
+
+[flex~="row"]     { flex-direction:row            }
+[flex~="col"]     { flex-direction:column         }
+[flex~="row-rev"] { flex-direction:row-reverse    }
+[flex~="col-rev"] { flex-direction:column-reverse }
+
+[flex~="between"] { justify-content:space-between }
+[flex~="around"]  { justify-content:space-around  }
+[flex~="evenly"]  { justify-content:space-evenly  }
+
+[flex~="jc-c"]  { justify-content:center     }
+[flex~="jc-bl"] { justify-content:baseline   }
+[flex~="jc-s"]  { justify-content:flex-start }
+[flex~="jc-e"]  { justify-content:flex-end   }
+
+[flex~="ai-c"]  { align-items:center     }
+[flex~="ai-bl"] { align-items:baseline   }
+[flex~="ai-s"]  { align-items:flex-start }
+[flex~="ai-e"]  { align-items:flex-end   }
+
+[flex~="g5"]  { gap:5px  }
+[flex~="g10"] { gap:10px }
+[flex~="g15"] { gap:15px }
+[flex~="g20"] { gap:20px }
+[flex~="g25"] { gap:25px }
+[flex~="g30"] { gap:30px }
+[flex~="g35"] { gap:35px }
+[flex~="g40"] { gap:40px }
+[flex~="g45"] { gap:45px }
+[flex~="g50"] { gap:50px }
+[flex~="g55"] { gap:55px }
+[flex~="g60"] { gap:60px }
+[flex~="g65"] { gap:65px }
+[flex~="g70"] { gap:70px }
+[flex~="g75"] { gap:75px }
+[flex~="g80"] { gap:80px }
+[flex~="g85"] { gap:85px }
+[flex~="g90"] { gap:90px }
+[flex~="g95"] { gap:95px }
+[flex~="g100"]{ gap:100px}
+
+[flex~="wrap"]{ flex-wrap: wrap; gap: 10px; }
+
+
+/* КУРСОРИ */
+[pointer]{cursor:pointer}
+
+[modal]{
+	position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    z-index: 9999;
+	background: #000000aa;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+}
